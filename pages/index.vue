@@ -1,16 +1,26 @@
 <template>
-	<div class="grid grid-cols-3 gap-x-24 gap-y-3 justify-items-center w-full">
-		<div class="col-span-3 h-auto text-center">
-			<img src="/logos/dvori-logo@2x.png" class="logo h-autox block" />
+	<div class="grid grid-cols-3 gap-x-24 gap-y-3 w-full min-h-screen">
+		<div class="col-span-3 m-auto mb-6 md:mb-auto text-center">
+			<img
+				src="/logos/dvori-logo@2x.png"
+				class="logo h-auto w-full md:w-auto block md:px-0"
+			/>
+			<h1 class="text-xl md:text-2xl">
+				Composable HTTP client for Node.js
+			</h1>
 			<NuxtLink
-				to="/projects/dvori/docs/introduction"
-				class="text-center inline-block w-fullx mt-6 px-6 py-3 bg-indigo-400 text-white text-xl rounded-xl"
+				to="/docs/introduction"
+				class="text-center block md:inline-block md:w-auto mt-6 px-6 py-3 bg-indigo-400 text-white text-xl rounded-xl"
 				>Documentation</NuxtLink
 			>
 		</div>
-		<div class="text-center">
-			<IconsMap class="w-24 text-indigo-300 inline-block" />
-			<h2 class="text-2xl my-2 font-semibold text-indigo-400">
+		<div
+			class="col-span-3 md:col-span-1 mx-auto mb-3 md:mb-auto text-center"
+		>
+			<IconsMap
+				class="w-8 md:w-14 lg:w-24 text-indigo-300 inline-block"
+			/>
+			<h2 class="text-2xl my-2 font-semibold text-indigo-500">
 				Composable
 			</h2>
 			<p>
@@ -18,8 +28,12 @@
 				it as needed, and use it over and over again.
 			</p>
 		</div>
-		<div class="text-center">
-			<IconsHeart class="w-24 text-indigo-300 inline-block" />
+		<div
+			class="col-span-3 md:col-span-1 mx-auto mb-3 md:mb-auto text-center"
+		>
+			<IconsHeart
+				class="w-8 md:w-14 lg:w-24 text-indigo-300 inline-block"
+			/>
 			<h2 class="text-2xl my-2 font-semibold text-indigo-400">
 				Powerful
 			</h2>
@@ -28,8 +42,10 @@
 				make creating a custom HTTP clients easy.
 			</p>
 		</div>
-		<div class="text-center">
-			<IconsGithub class="w-24 text-indigo-300 inline-block" />
+		<div class="col-span-3 md:col-span-1 mx-auto pb-20 md:pb-0 text-center">
+			<IconsGithub
+				class="w-8 md:w-14 lg:w-24 text-indigo-300 inline-block"
+			/>
 			<h2 class="text-2xl my-2 font-semibold text-indigo-400">
 				Open Source
 			</h2>
@@ -55,9 +71,7 @@
 	</div>
 </template>
 <script>
-export default {
-	layout: "docs",
-};
+export default {};
 </script>
 <style lang="postcss" scoped>
 .logo {
