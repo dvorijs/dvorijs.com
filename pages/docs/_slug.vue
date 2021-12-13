@@ -21,21 +21,21 @@
 						>
 							<li>
 								<NuxtLink
-									to="/projects/dvori/docs/introduction"
+									to="/docs/introduction"
 									class="inline-block mb-1 text-sm font-semibold"
 									>Introduction</NuxtLink
 								>
 							</li>
 							<li>
 								<NuxtLink
-									to="/projects/dvori/docs/installation"
+									to="/docs/installation"
 									class="inline-block mb-1 text-sm font-semibold"
 									>Installation</NuxtLink
 								>
 							</li>
 							<li>
 								<NuxtLink
-									to="/projects/dvori/docs/basic-usage"
+									to="/docs/basic-usage"
 									class="inline-block mb-1 text-sm font-semibold"
 									>Basic Usage</NuxtLink
 								>
@@ -44,14 +44,14 @@
 					</li>
 					<li>
 						<NuxtLink
-							to="/projects/dvori/docs/plugins"
+							to="/docs/plugins"
 							class="inline-block my-1 text-base font-semibold"
 							>Plugins</NuxtLink
 						>
 					</li>
 					<li>
 						<NuxtLink
-							to="/projects/dvori/docs/middleware"
+							to="/docs/middleware"
 							class="inline-block my-1 text-base font-semibold"
 							>Middleware</NuxtLink
 						>
@@ -63,7 +63,7 @@
 						>
 							<li>
 								<NuxtLink
-									to="/projects/dvori/docs/reddit-example"
+									to="/docs/reddit-example"
 									class="inline-block mb-1 text-sm font-semibold"
 									>Reddit</NuxtLink
 								>
@@ -104,10 +104,7 @@
 export default {
 	layout: "docs",
 	async asyncData({ $content, params }) {
-		console.log(params.slug);
-		console.log("params");
-		console.log(params);
-		const page = await $content("docs", "dvori", params.slug).fetch();
+		const page = await $content("docs", params.slug).fetch();
 
 		return { page };
 	},
