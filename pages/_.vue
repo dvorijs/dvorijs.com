@@ -98,21 +98,6 @@
 							</li>
 						</ul>
 					</li>
-
-					<li>
-						<NuxtLink
-							to="/plugins"
-							class="inline-block my-1 text-base font-semibold"
-							>Plugins</NuxtLink
-						>
-					</li>
-					<li>
-						<NuxtLink
-							to="/middleware"
-							class="inline-block my-1 text-base font-semibold"
-							>Middleware</NuxtLink
-						>
-					</li>
 					<li class="">
 						Examples
 						<ul
