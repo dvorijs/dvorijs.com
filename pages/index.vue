@@ -9,7 +9,7 @@
 				Composable HTTP client for Node.js
 			</h1>
 			<NuxtLink
-				to="/docs/introduction"
+				to="/introduction"
 				class="text-center block md:inline-block md:w-auto mt-6 px-6 py-3 bg-indigo-400 text-white text-xl rounded-xl"
 				>Documentation</NuxtLink
 			>
