@@ -59,13 +59,7 @@
 					>Github</a
 				>
 				and
-				<a
-					href="https://www.npmjs.com/package/dvori"
-					class="font-semibold"
-					title="Dvori on NPM"
-					target="_blank"
-					>NPM</a
-				>
+				<NPMLink />
 			</p>
 		</div>
 	</div>
