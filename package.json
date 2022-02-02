@@ -22,7 +22,7 @@
         "babel-jest": "^27.4.6",
         "eslint-config-prettier": "^8.3.0",
         "jest": "^27.4.7",
-        "postcss": "^8.4.5",
+        "postcss": "^8.4.6",
         "prettier": "^2.5.1",
         "vue-jest": "^3.0.4"
     },
