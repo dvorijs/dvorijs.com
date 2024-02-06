@@ -1,0 +1,52 @@
+---
+title: Getting Started
+description: A guide in my new Starlight docs site.
+---
+
+import { Tabs, TabItem, Code } from "@astrojs/starlight/components";
+
+**Welcome to Dvori** – your tool for crafting advanced HTTP clients with ease. Whether you're integrating with complex APIs or need fine-grained control over your requests, Dvori's here to simplify the process.
+
+### Installation
+
+<Tabs>
+    <TabItem label="npm">
+        <Code code={`npm install dvori`} lang="bash" />
+    </TabItem>
+    <TabItem label="pnpm">
+        <Code code={`pnpm add dvori`} lang="bash" />
+    </TabItem>
+    <TabItem label="Yarn">
+        <Code code={`yarn add dvori`} lang="bash" />
+    </TabItem>
+</Tabs>
+
+### Your First Request
+
+Let's make your first API request to see Dvori in action:
+
+-   **Define Your Client:** Create a client instance with `defineClient()`, setting a `baseURL` for your target API.
+-   **Make a GET Request:** Use `client.get('/your-endpoint')` to fetch data.
+
+**Example:**
+
+<Code code={`
+import { defineClient } from 'dvori';
+
+// Initialize the Dvori client with optional global configurations
+const client = defineClient({
+baseURL: 'https://api.example.com',
+});
+
+// Make a GET request to retrieve data
+client.get('/data')
+.then(response => console.log(response))
+.catch(error => console.error(error));
+`} lang="ts" title="typescript" />
+
+**What You Accomplished:** You've just sent a real API request using Dvori. This simple example illustrates how Dvori streamlines HTTP requests, but there's much more you can do.
+
+### Next Steps
+
+-   **Explore Composables:** Learn how to customize requests and responses with Dvori's composables.
+-   **Dive Deeper:** Check out the documentation for advanced features like streaming support and creating API clients.
