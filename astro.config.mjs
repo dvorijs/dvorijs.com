@@ -1,13 +1,23 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
-import netlify from "@astrojs/netlify";
+// import netlify from "@astrojs/netlify";
 
 // https://astro.build/config
 export default defineConfig({
-    output: "server",
-    adapter: netlify(),
+    experimental: {
+        i18nDomains: false,
+    },
+    // output: "server",
+    // adapter: netlify(),
     integrations: [
         starlight({
+            // defaultLocale: "root",
+            // locales: {
+            //     root: {
+            //         label: "English",
+            //         lang: "en", // lang is required for root locales
+            //     },
+            // },
             title: "Dvori",
             logo: {
                 src: "./src/assets/dvori-logo.png",
