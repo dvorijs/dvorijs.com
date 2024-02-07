@@ -1,8 +1,11 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
+import netlify from "@astrojs/netlify";
 
 // https://astro.build/config
 export default defineConfig({
+    output: "server",
+    adapter: netlify(),
     integrations: [
         starlight({
             title: "Dvori",
@@ -21,10 +24,12 @@ export default defineConfig({
                             label: "Getting Started",
                             link: "/getting-started/",
                         },
-                        { label: "Why Dvori", link: "/why-dvori/" },
+                        {
+                            label: "Why Dvori",
+                            link: "/why-dvori/",
+                        },
                     ],
                 },
-
                 {
                     label: "Core Concepts",
                     items: [
@@ -46,7 +51,6 @@ export default defineConfig({
                         },
                     ],
                 },
-
                 {
                     label: "Composables",
                     items: [
@@ -54,37 +58,53 @@ export default defineConfig({
                             label: "Introduction to Composables",
                             link: "/composables/intro/",
                         },
+                        {
+                            label: "Lifecycle Hooks",
+                            link: "/composables/lifecycle-hooks/",
+                        },
                     ],
                 },
                 {
                     label: "Clients",
                     items: [
-                        { label: "Introduction to Clients", link: "/todo/" },
+                        {
+                            label: "Introduction to Clients",
+                            link: "/todo/",
+                        },
                     ],
                 },
                 {
                     label: "Advanced Topics",
                     items: [
-                        { label: "Performance Optimization", link: "/todo/" },
-                        { label: "Security Best Practices", link: "/todo/" },
+                        {
+                            label: "Performance Optimization",
+                            link: "/todo/",
+                        },
+                        {
+                            label: "Security Best Practices",
+                            link: "/todo/",
+                        },
                     ],
                 },
-
                 {
                     label: "API Reference",
                     link: "/todo/",
                 },
-
                 {
                     label: "Guides",
                     items: [
                         // Each item here is one entry in the navigation menu.
-                        { label: "Example Guide", link: "/guides/example/" },
+                        {
+                            label: "Example Guide",
+                            link: "/guides/example/",
+                        },
                     ],
                 },
                 {
                     label: "Reference",
-                    autogenerate: { directory: "reference" },
+                    autogenerate: {
+                        directory: "reference",
+                    },
                 },
             ],
         }),

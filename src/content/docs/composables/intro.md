@@ -5,6 +5,15 @@ description: A composable HTTP client
 
 Composables are at the heart of Dvori's flexibility and power, allowing developers to customize and extend their HTTP clients in a modular and reusable way. This page provides an overview of how to effectively use composables within your projects.
 
+## Why Composables?
+
+In the evolving landscape of web development, the ability to quickly adapt and customize your tools can significantly impact productivity and performance. Composables address common challenges such as:
+
+-   **Authentication**: Seamlessly integrate authentication mechanisms across all requests.
+-   **Error Handling**: Implement centralized error handling strategies to maintain robustness.
+-   **Data Transformation**: Manipulate request and response data effortlessly, aligning it with your application's needs.
+-   **State Management**: Keep track of request states or caching without external dependencies.
+
 ## Lifecycle Hooks
 
 Composables leverage lifecycle hooks to inject functionality at different stages of the HTTP request/response cycle. The key lifecycle hooks available are:
