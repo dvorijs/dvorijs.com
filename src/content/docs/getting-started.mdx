@@ -5,7 +5,7 @@ description: A guide in my new Starlight docs site.
 
 import { Tabs, TabItem, Code } from "@astrojs/starlight/components";
 
-**Welcome to Dvori** – your tool for crafting advanced HTTP clients with ease. Whether you're integrating with complex APIs or need fine-grained control over your requests, Dvori's here to simplify the process.
+**Dvori** is a tool for crafting advanced HTTP clients with ease. Whether you're integrating with complex APIs or need fine-grained control over your requests, Dvori's here to simplify the process.
 
 ### Installation
 
@@ -31,17 +31,18 @@ Let's make your first API request to see Dvori in action:
 **Example:**
 
 <Code code={`
-import { defineClient } from 'dvori';
+    import { defineClient } from 'dvori';
 
-// Initialize the Dvori client with optional global configurations
-const client = defineClient({
-baseURL: 'https://api.example.com',
-});
+    // Initialize the Dvori client with optional global configurations
+    const client = defineClient({
+        baseURL: 'https://api.example.com',
+    });
 
-// Make a GET request to retrieve data
-client.get('/data')
-.then(response => console.log(response))
-.catch(error => console.error(error));
+    // Make a GET request to retrieve data
+    client.get('/data')
+        .then(response => console.log(response))
+        .catch(error => console.error(error));
+
 `} lang="ts" title="typescript" />
 
 **What You Accomplished:** You've just sent a real API request using Dvori. This simple example illustrates how Dvori streamlines HTTP requests, but there's much more you can do.

@@ -1,23 +1,13 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
-// import netlify from "@astrojs/netlify";
 
 // https://astro.build/config
 export default defineConfig({
     experimental: {
         i18nDomains: false,
     },
-    // output: "server",
-    // adapter: netlify(),
     integrations: [
         starlight({
-            // defaultLocale: "root",
-            // locales: {
-            //     root: {
-            //         label: "English",
-            //         lang: "en", // lang is required for root locales
-            //     },
-            // },
             title: "Dvori",
             logo: {
                 src: "./src/assets/dvori-logo.png",
@@ -25,6 +15,9 @@ export default defineConfig({
             },
             social: {
                 github: "https://github.com/dvorijs/dvori",
+            },
+            editLink: {
+                baseUrl: "https://github.com/dvorijs/dvorijs.com/edit/main",
             },
             sidebar: [
                 {
@@ -56,7 +49,7 @@ export default defineConfig({
                             link: "/core-concepts/error-handling",
                         },
                         {
-                            label: "Streams",
+                            label: "Streaming",
                             link: "/core-concepts/streams",
                         },
                     ],
@@ -65,12 +58,16 @@ export default defineConfig({
                     label: "Composables",
                     items: [
                         {
-                            label: "Introduction to Composables",
+                            label: "Introduction ",
                             link: "/composables/intro/",
                         },
                         {
                             label: "Lifecycle Hooks",
                             link: "/composables/lifecycle-hooks/",
+                        },
+                        {
+                            label: "Custom Composables",
+                            link: "/composables/create-your-own/",
                         },
                     ],
                 },

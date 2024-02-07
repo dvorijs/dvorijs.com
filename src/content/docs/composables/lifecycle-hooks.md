@@ -2,7 +2,7 @@
 title: Lifecycle Hooks in Detail
 ---
 
-#### BeforeRequest
+## BeforeRequest
 
 **Description**: The `beforeRequest` hook provides an interception point before the request is dispatched. This is the perfect place to modify the request configuration, such as headers, query parameters, or the request body.
 
@@ -22,7 +22,7 @@ const useQueryParams = {
 };
 ```
 
-#### AfterResponse
+## AfterResponse
 
 **Description**: This hook is called after a response is received. It can be used for processing and transforming response data, handling global error logging, or implementing response caching mechanisms.
 
@@ -39,7 +39,7 @@ const useResponseLogger = {
 };
 ```
 
-#### OnError
+## OnError
 
 **Description**: The `onError` hook is triggered in case of a request failure. It allows for centralized error management, providing opportunities for error logging, recovery strategies like request retries, or token refreshes.
 
@@ -55,7 +55,7 @@ const useErrorHandler = {
 };
 ```
 
-#### Finalize
+## Finalize
 
 **Description**: This hook runs after the request completes, regardless of its outcome. It's suitable for performing cleanup operations, logging request metrics, or any final steps required after a request.
 
